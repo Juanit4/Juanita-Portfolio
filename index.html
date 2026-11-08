@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Juanita Fuentes: designer, athlete, strategist. Sport, strategic, digital product and graphic design.">
+<title>Juanita Fuentes Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Archivo:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: poster grid of hairlines on clean white; full-bleed section bands make each part of the page distinct.
+   Four lenses share one system; each lens owns a vibrant hue. Pixel creatures and mosaics are the playful signature.
+   Type: condensed display for names and titles, Helvetica for everything else. */
+:root{
+  --paper:#FFFFFF;
+  --ink:#17131F;
+  --ink-2:#5B5566;
+  --line:#E7E3EE;
+  --soft:#F6F4F9;
+  --band:#F3EFF8;
+  --magenta:#EC1E7F;   /* sport */
+  --yellow:#FFC600;    /* strategy */
+  --cyan:#14D4F4;      /* product */
+  --lime:#ABF28A;      /* graphic */
+  --lavender:#B08BD0;  /* system */
+  --display:"Big Shoulders Display","Arial Narrow","Helvetica Neue Condensed",Impact,sans-serif;
+  --body:"Helvetica Neue",Helvetica,"Archivo",Arial,sans-serif;
+  --gl:max(16px,env(safe-area-inset-left,0px));
+  --gr:max(16px,env(safe-area-inset-right,0px));
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+[hidden]{display:none!important}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+a{color:inherit}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+:focus-visible{outline:2px solid var(--magenta);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding-left:var(--gl);padding-right:var(--gr)}
+.small{font-size:13px;letter-spacing:.01em}
+.label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-2)}
+h1,h2,h3{font-family:var(--display);font-weight:800;text-transform:uppercase;line-height:.92;letter-spacing:.01em;word-spacing:.12em;margin:0;text-wrap:balance}
+
+/* top bar */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--paper);border-bottom:1px solid var(--ink)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
+.brand{font-family:var(--display);font-weight:900;font-size:22px;text-transform:uppercase;text-decoration:none;letter-spacing:.04em;word-spacing:.22em;display:flex;align-items:center;gap:10px}
+.brand svg{width:30px;height:30px;flex:0 0 auto}
+.nav{display:flex;gap:20px;flex-wrap:wrap}
+.nav a{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;text-decoration:none}
+.nav a:hover{text-decoration:underline;text-underline-offset:4px}
+
+/* poster hero */
+.poster{container-type:inline-size;grid-auto-rows:minmax(25cqi,auto);display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid var(--line);border-top:1px solid var(--line);margin-block:28px 72px}
+.cell{border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;min-width:0;padding:14px;overflow:hidden}
+.cell canvas{position:absolute;inset:0;width:100%;height:100%}
+.stack{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(24px,3.3vw,46px);line-height:.95}
+.stack span{display:block}
+.hero-name{grid-column:span 2;aspect-ratio:auto;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.hero-name h1{font-size:clamp(52px,9.2vw,130px);line-height:.92;letter-spacing:.02em;word-break:keep-all}
+.hero-name h1 span{display:block}
+.hero-name p{max-width:34ch;font-size:clamp(16px,1.6vw,20px);line-height:1.35;margin:0}
+.statement{display:flex;flex-direction:column;justify-content:space-between;gap:12px}
+.facts{display:flex;flex-direction:column;gap:4px;border-top:1px solid var(--line);padding-top:10px}
+.facts .small{font-size:12px;line-height:1.35;color:var(--ink-2)}
+.photo{padding:0}
+.photo img{width:100%;height:100%;object-fit:cover}
+.sticker{position:absolute;right:10px;bottom:10px;background:var(--ink);color:var(--paper);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;padding:4px 7px}
+
+/* section bands */
+.band{padding-block:64px 72px;border-top:1px solid var(--ink)}
+.band.tint{background:var(--band)}
+.sec-head{display:grid;grid-template-columns:auto auto 1fr;gap:12px 20px;align-items:baseline;margin-bottom:32px}
+.sec-head .idx{font-family:var(--display);font-weight:900;font-size:clamp(40px,6vw,84px);line-height:.9;color:transparent;-webkit-text-stroke:1.5px var(--ink)}
+.sec-head h2{font-size:clamp(40px,6vw,84px)}
+.sec-head p{margin:0;color:var(--ink-2);font-size:15px;justify-self:end;text-align:right}
+.pixrule{display:flex;gap:3px;margin-bottom:28px;height:10px}
+.pixrule i{flex:1;background:var(--c)}
+
+/* about */
+.about{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:start}
+.about .big{font-size:clamp(22px,2.6vw,32px);line-height:1.28;margin:0 0 20px;max-width:30ch;text-wrap:pretty}
+.about .body p{max-width:56ch;margin:0 0 12px;color:var(--ink-2)}
+.about dl{display:grid;grid-template-columns:auto 1fr;gap:12px 20px;margin:0;background:var(--paper);border:1px solid var(--line);padding:20px}
+.about dt{padding-top:3px}
+.about dd{margin:0}
+.traits{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.traits span{border:1px solid var(--ink);border-radius:999px;padding:5px 12px;font-size:13px;background:var(--paper)}
+
+/* lenses */
+.lenses{display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid var(--line);border-top:1px solid var(--line)}
+.lens{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px;text-align:left;display:flex;flex-direction:column;gap:14px;min-width:0;transition:background .2s}
+.lens:hover{background:var(--soft)}
+.lens[aria-pressed="true"]{background:var(--soft);box-shadow:inset 0 -6px 0 var(--c)}
+.lens .face{aspect-ratio:1/1;width:100%}
+.lens .face canvas{width:100%;height:100%;display:block}
+.lens h3{font-size:clamp(26px,2.8vw,40px)}
+.lens .what{font-size:14px;color:var(--ink-2);line-height:1.4;margin:0}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
+.chip::before{content:"";width:9px;height:9px;background:var(--c)}
+
+/* work index */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.filters button{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;border:1px solid var(--ink);padding:7px 14px;border-radius:999px;background:var(--paper)}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px 24px}
+.card.feature{grid-column:1/-1}
+.card.feature .poster-tile{aspect-ratio:21/8}
+.card{display:flex;flex-direction:column;gap:10px;text-decoration:none;min-width:0}
+.card[hidden]{display:none!important}
+.poster-tile{container-type:inline-size;aspect-ratio:4/3;position:relative;overflow:hidden;border:1px solid var(--ink);background:linear-gradient(var(--ang,135deg),var(--g1),var(--g2));display:flex;flex-direction:column;justify-content:space-between;padding:14px;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.card:hover .poster-tile{transform:translate(-4px,-4px);box-shadow:4px 4px 0 var(--ink)}
+.poster-tile canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.poster-tile .nm{position:relative;font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(28px,8.5cqi,64px);line-height:.95;letter-spacing:.02em;word-spacing:.12em;max-width:92%;text-wrap:balance;overflow-wrap:normal;word-break:keep-all;hyphens:none}
+.poster-tile .top-row{position:relative;display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.poster-tile .kick{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;background:var(--paper);padding:3px 7px}
+.poster-tile .flag{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;background:var(--ink);color:var(--paper);padding:3px 7px}
+.card .meta{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.card .meta b{font-weight:600}
+.card p{margin:0;font-size:15px;color:var(--ink-2);line-height:1.4}
+.card .tags{display:flex;gap:12px;flex-wrap:wrap}
+
+footer{border-top:1px solid var(--ink);padding-block:36px 44px;background:var(--ink);color:var(--paper)}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:end}
+footer h2{font-size:clamp(48px,9vw,120px)}
+footer .label{color:#BDB6C9}
+.contact{display:flex;flex-direction:column;gap:6px}
+.contact span{user-select:all}
+.contact a{color:var(--paper);text-decoration:none}
+.contact a:hover{text-decoration:underline}
+
+.obj3d{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;background:linear-gradient(135deg,#F6F4F9,#EDE7F6);border:1px solid var(--line);padding:24px;min-height:520px}
+.stage3d{height:480px;perspective:1400px;display:flex;align-items:center;justify-content:center;cursor:grab;touch-action:none;user-select:none}
+.stage3d:active{cursor:grabbing}
+.card3d{position:relative;width:240px;height:371px;transform-style:preserve-3d;will-change:transform}
+.card3d .f{position:absolute;inset:0;border-radius:14px;background-size:cover;background-position:center;backface-visibility:hidden;box-shadow:0 30px 60px rgba(23,19,31,.28)}
+.card3d .b{transform:rotateY(180deg)}
+.card3d .edge{position:absolute;inset:0;border-radius:14px;background:#2a2527;transform:translateZ(-1px)}
+.obj3d .hint{font-size:13px;color:var(--ink-2);display:flex;flex-direction:column;gap:10px;max-width:180px}
+.obj3d .hint button{border:1px solid var(--ink);padding:7px 12px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;background:var(--paper)}
+@media (max-width:560px){.obj3d{grid-template-columns:1fr}.stage3d{height:420px}}
+
+.clips{display:flex;gap:16px;flex-wrap:wrap}
+.clip{margin:0;width:200px;display:flex;flex-direction:column;gap:8px}
+.clip.wide{width:min(100%,720px)}
+.clip video{width:100%;display:block;border-radius:10px;background:var(--soft)}
+.clip.phone video{border-radius:13.5%/6.7%;background:transparent;filter:drop-shadow(0 14px 22px rgba(23,19,31,.22))}
+.clip figcaption{font-size:13px;color:var(--ink-2);line-height:1.35}
+.clip figcaption b{display:block;color:var(--ink);font-weight:600}
+.cv{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--ink);margin-top:40px}
+.cv > div{padding:20px 20px 0 0;min-width:0}
+.cv h3{font-size:26px;margin-bottom:14px}
+.cv ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.cv li b{display:block;font-weight:600}
+.cv li span{display:block;font-size:14px;color:var(--ink-2)}
+@media (max-width:900px){.cv{grid-template-columns:1fr}}
+
+/* ---------- CASE ---------- */
+.case-band{background:linear-gradient(120deg,var(--g1),var(--g2));border-bottom:1px solid var(--ink);position:relative;overflow:hidden}
+.case-band canvas{position:absolute;right:0;top:0;height:100%;width:min(30%,340px);pointer-events:none}
+.case-band .wrap{position:relative;padding-block:22px 40px;container-type:inline-size}
+.case-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+.back{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;background:var(--paper);padding:6px 10px;text-decoration:none;border:1px solid var(--ink)}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chips .chip{background:var(--paper);padding:4px 8px}
+.case-band .kick{display:inline-block;background:var(--paper);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;padding:4px 8px;margin-bottom:14px}
+.case-band h1{font-size:clamp(30px,9.5cqi,150px);line-height:.95;letter-spacing:.02em;max-width:72%;overflow-wrap:normal;word-break:keep-all;hyphens:none}
+.case-band .sub{max-width:min(34ch,calc(100% - min(30%,340px)))}
+.case-band .sub{font-size:clamp(19px,2vw,26px);line-height:1.25;max-width:34ch;margin:18px 0 0;text-wrap:pretty}
+
+.glance{display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid var(--line);margin-top:0}
+.glance div{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 16px;min-width:0}
+.glance b{display:block;font-weight:600;margin-top:4px}
+.summary{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;padding-block:48px;border-bottom:1px solid var(--ink)}
+.summary .inshort{font-size:clamp(21px,2.3vw,28px);line-height:1.3;margin:8px 0 0;max-width:36ch;text-wrap:pretty}
+.trio{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+.trio div{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.trio p{margin:0}
+.grade{font-family:var(--display);font-weight:900;font-size:44px;line-height:.9}
+.draft{display:inline-block;margin-left:8px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;background:var(--yellow);padding:2px 6px;vertical-align:middle}
+
+.chapters{display:flex;gap:6px;flex-wrap:wrap;padding-block:18px;border-bottom:1px solid var(--line);position:sticky;top:calc(env(safe-area-inset-top,0px) + 51px);background:var(--paper);z-index:5}
+.chapters button{font-size:12px;font-weight:600;letter-spacing:.04em;padding:5px 10px;border:1px solid var(--line);border-radius:999px}
+.chapters button:hover{border-color:var(--ink)}
+.chapters button span{color:var(--ink-2);margin-right:4px}
+
+.block{display:grid;grid-template-columns:220px 1fr;gap:24px;padding-block:56px;border-bottom:1px solid var(--line);scroll-margin-top:120px}
+.block > header{display:flex;flex-direction:column;gap:6px;padding-top:4px}
+.block > header .n{font-family:var(--display);font-weight:900;font-size:40px;line-height:.9;color:transparent;-webkit-text-stroke:1.2px var(--ink)}
+.block > div{min-width:0}
+.lede{font-size:clamp(22px,2.4vw,30px);line-height:1.25;margin:0 0 14px;max-width:34ch;text-wrap:pretty}
+.block p{max-width:64ch}
+.block ul{max-width:64ch;padding-left:18px;margin:0 0 12px}
+.block li{margin-bottom:6px}
+.pics{display:grid;gap:14px;margin-top:22px}
+.pics.c1{grid-template-columns:1fr}
+.pics.c2{grid-template-columns:repeat(2,1fr)}
+.pics.c3{grid-template-columns:repeat(3,1fr)}
+.pics.c5{grid-template-columns:repeat(5,1fr)}
+.pics figure{margin:0;min-width:0}
+.pics img{width:100%;border:1px solid var(--line);background:var(--soft)}
+.pics figcaption{font-size:12px;color:var(--ink-2);margin-top:6px}
+.slot{aspect-ratio:4/3;border:1px dashed var(--ink-2);position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:10px}
+.slot canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+.slot span{position:relative;background:var(--paper);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;padding:3px 6px}
+.linkout{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;border:1px solid var(--ink);padding:9px 14px;text-decoration:none}
+.linkout:hover{background:var(--ink);color:var(--paper)}
+
+/* media */
+.media{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,340px));gap:16px;margin-top:20px}
+.vcard{display:flex;flex-direction:column;gap:8px;text-decoration:none;min-width:0}
+.vcard .scr{aspect-ratio:16/10;border:1px solid var(--ink);background:linear-gradient(135deg,var(--g1),var(--g2));position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.vcard .scr canvas{position:absolute;inset:0;width:100%;height:100%}
+.vcard .play{position:relative;width:64px;height:64px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;transition:transform .25s}
+.vcard .play::after{content:"";border-left:18px solid var(--paper);border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:5px}
+.vcard:hover .play{transform:scale(1.08)}
+.vcard .where{position:absolute;left:10px;bottom:10px;background:var(--paper);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;padding:3px 7px}
+.vcard b{font-weight:600}
+.vcard span.d{font-size:14px;color:var(--ink-2)}
+.player{margin-top:20px;border:1px solid var(--ink);display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;padding:16px;background:linear-gradient(120deg,#E9DDF6,#DCEBFF 60%,#F2FFD6)}
+.player .pbtn{width:64px;height:64px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.player .pbtn i{display:block;border-left:18px solid var(--paper);border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:5px}
+.player .pbtn.on i{border:0;margin:0;width:18px;height:20px;border-left:6px solid var(--paper);border-right:6px solid var(--paper)}
+.player .info{min-width:0}
+.player b{display:block;font-weight:600}
+.wave{display:flex;gap:2px;align-items:center;height:40px;margin-top:8px;cursor:pointer}
+.wave i{flex:1;background:rgba(23,19,31,.25);min-height:3px}
+.wave i.on{background:var(--ink)}
+.ptime{font-size:12px;color:var(--ink-2);font-variant-numeric:tabular-nums;margin-top:4px}
+
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 32px;margin-top:20px}
+.stat{min-width:0}
+.stat .num{font-family:var(--display);font-weight:900;font-size:72px;line-height:.85;font-variant-numeric:tabular-nums}
+.stat .bar{display:grid;grid-template-columns:repeat(20,1fr);gap:2px;margin:10px 0 8px}
+.stat .bar i{aspect-ratio:1/1;background:var(--line)}
+.stat .bar i.on{background:var(--c)}
+.stat p{margin:0;font-size:15px;color:var(--ink-2);max-width:36ch}
+.facts2{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);margin:8px 0 16px}
+.facts2 div{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px;min-width:0}
+.facts2 .n{font-family:var(--display);font-weight:900;font-size:56px;line-height:.85;display:block;margin-bottom:8px}
+.facts2 p{margin:0;font-size:14px;color:var(--ink-2)}
+.insight{padding-block:64px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.insight h2{font-size:clamp(52px,9vw,140px);line-height:.88;position:relative;z-index:1;max-width:11ch}
+.insight h2 em{font-style:normal;background:var(--hl,var(--yellow));padding:0 .08em}
+.insight .q{margin-top:16px;position:relative;z-index:1;max-width:60ch;font-size:16px}
+.insight canvas{position:absolute;right:0;top:0;width:min(40%,440px);height:100%}
+.did{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.did.c3{grid-template-columns:repeat(3,1fr)}
+.did.c4{grid-template-columns:repeat(4,1fr)}
+.did > div{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px;min-width:0}
+.did h3{font-size:28px;margin-bottom:8px}
+.did p{margin:0;font-size:15px;color:var(--ink-2)}
+.palette{display:flex;margin-top:14px;max-width:520px}
+.palette i{flex:1;height:56px}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:15px}
+.compare th,.compare td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.compare th{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-2)}
+.compare td:first-child{font-weight:600}
+.compare tr.us td{background:var(--soft)}
+.tablewrap{overflow-x:auto}
+
+/* flow */
+.apptabs{display:flex;border:1px solid var(--ink);width:max-content;max-width:100%;margin:6px 0 4px;flex-wrap:wrap}
+.apptabs button{padding:8px 14px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;display:flex;align-items:center;gap:8px}
+.apptabs button[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+.apptabs button::before{content:"";width:9px;height:9px;background:var(--c)}
+.flowhelp{font-size:15px;color:var(--ink-2);margin:10px 0 0;max-width:60ch}
+.flow{overflow-x:auto;padding-block:18px 10px;margin-top:6px}
+.flow ol{list-style:none;margin:0;padding:0;display:flex;width:max-content}
+.flow li{width:220px;flex:0 0 auto;display:flex;flex-direction:column;gap:10px;padding-right:44px;position:relative}
+.flow li:not(:last-child)::after{content:"";position:absolute;top:150px;right:8px;width:28px;border-top:2px dashed var(--ink)}
+.flow li:not(:last-child)::before{content:"";position:absolute;top:145px;right:6px;border:6px solid transparent;border-left-color:var(--ink);border-right:0}
+.flow img{width:176px;filter:drop-shadow(0 10px 18px rgba(23,19,31,.14))}
+.flow .n{font-size:11px;font-weight:600;display:inline-flex;align-items:center;gap:6px;text-transform:uppercase;letter-spacing:.08em}
+.flow .n b{background:var(--c);padding:1px 6px}
+.flow h4{font-family:var(--display);font-weight:800;font-size:22px;text-transform:uppercase;margin:0;line-height:.95}
+.flow p{margin:0;font-size:14px;color:var(--ink-2);line-height:1.4}
+.funnel{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.fstep{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:center}
+.fstep > div{min-width:0}
+.fstep .b{height:38px;background:var(--c);display:flex;align-items:center;padding:0 12px;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fstep .k{font-family:var(--display);font-weight:800;font-size:24px;text-transform:uppercase}
+.credit{font-size:14px;color:var(--ink-2);margin-top:12px}
+.next{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:40px;flex-wrap:wrap}
+.next a{text-decoration:none}
+.next h2{font-size:clamp(30px,7vw,90px);word-break:keep-all}
+.next a:hover h2{text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:8px}
+
+
+/* unified case block: number + label on the left, content stacked on the right with one rhythm */
+.block .bc{display:flex;flex-direction:column;gap:20px;min-width:0}
+.block .bc > *{margin:0}
+.block .lede{margin:0;max-width:34ch}
+.block .txt{max-width:64ch;margin:0}
+.block .bc > ul{margin:0;padding-left:18px;max-width:64ch}
+.block .bc > ul li{margin-bottom:8px}
+.block .bc > ul li:last-child{margin-bottom:0}
+.block .bc .pics,.block .bc .media,.block .bc .stats,.block .bc .player,.block .bc .facts2{margin:0}
+.block .bc .linkout{align-self:flex-start;margin:0}
+.aside{font-size:14px;color:var(--ink-2);margin:0;max-width:64ch}
+.pull{border-top:1px solid var(--line);padding-top:24px;margin-top:8px}
+.pull .ph{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(44px,6.4vw,96px);line-height:1.02;letter-spacing:.02em;word-spacing:.12em;margin:0;max-width:12ch;text-wrap:balance}
+.pull .ph em{font-style:normal;background:linear-gradient(transparent 60%,var(--hl) 60%);-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 .04em}
+.pull .ps{margin:14px 0 0;max-width:56ch;font-size:16px}
+.did h3{font-size:24px;line-height:1;margin-bottom:10px}
+.did > div{display:flex;flex-direction:column}
+.flow{margin-top:0;padding-block:8px 0}
+
+@media (max-width:900px){
+  .poster,.lenses{grid-template-columns:repeat(2,1fr)}
+  .poster{grid-auto-rows:minmax(50cqi,auto)}
+  .poster .cell:last-child{grid-column:span 2}
+  .statement{grid-column:span 2;aspect-ratio:auto;min-height:0}
+  .statement .stack{font-size:clamp(30px,8vw,46px)}
+  .about,.summary{grid-template-columns:1fr}
+  .block{grid-template-columns:1fr;gap:10px}
+  .block > header{flex-direction:row;align-items:baseline;gap:12px}
+  .facts2,.glance,.did.c4{grid-template-columns:repeat(2,1fr)}
+  .pics.c5{grid-template-columns:repeat(3,1fr)}
+  .did.c3{grid-template-columns:1fr}
+  .sec-head{grid-template-columns:auto 1fr}
+  .sec-head p{grid-column:1/-1;justify-self:start;text-align:left;font-size:14px}
+  .chapters{position:static}
+}
+@media (max-width:560px){
+  .grid,.stats,.did,.did.c4,.pics.c2,.pics.c3{grid-template-columns:1fr}
+  .pics.c5{grid-template-columns:repeat(2,1fr)}
+  .trio div{grid-template-columns:1fr;gap:4px}
+  .fstep{grid-template-columns:1fr;gap:4px}
+  .insight canvas,.case-band canvas{opacity:.35;width:70%}
+  .nav{gap:12px}
+  .brand span{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="Juanita Fuentes, home">
+      <svg viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true">
+        <rect x="2" y="0" width="1" height="1" fill="#FFC600"/><rect x="5" y="0" width="1" height="1" fill="#FFC600"/>
+        <rect x="1" y="1" width="6" height="1" fill="#EC1E7F"/><rect x="1" y="2" width="6" height="1" fill="#F0567A"/>
+        <rect x="0" y="3" width="8" height="1" fill="#B08BD0"/><rect x="0" y="4" width="8" height="1" fill="#7FB3E8"/>
+        <rect x="1" y="5" width="6" height="1" fill="#14D4F4"/><rect x="1" y="6" width="6" height="1" fill="#5FE0C0"/>
+        <rect x="2" y="7" width="1" height="1" fill="#ABF28A"/><rect x="5" y="7" width="1" height="1" fill="#ABF28A"/>
+        <rect x="2" y="3" width="1" height="1" fill="#fff"/><rect x="3" y="3" width="1" height="1" fill="#17131F"/>
+        <rect x="5" y="3" width="1" height="1" fill="#fff"/><rect x="6" y="3" width="1" height="1" fill="#17131F"/>
+      </svg><span>Juanita Fuentes</span></a>
+    <nav class="nav" aria-label="Main"><a href="#about">About</a><a href="#lenses">Lenses</a><a href="#work">Work</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<div id="view-home">
+  <div class="wrap">
+    <div class="poster" aria-label="Introduction">
+      <div class="cell hero-name"><h1><span>Juanita</span><span>Fuentes</span></h1><p>I turn complex problems into things people can use, fund and believe in.</p></div>
+      <div class="cell"><canvas data-mosaic="sport" aria-hidden="true"></canvas></div>
+      <div class="cell"><canvas data-mosaic="sport2" aria-hidden="true"></canvas></div>
+      <div class="cell statement"><div class="stack"><span>Designer.</span><span>Athlete.</span><span>Strategist.</span></div><div class="facts"><span class="small">B.A. Design, Universidad Torcuato Di Tella · Dec 2026</span><span class="small">Buenos Aires → Remote</span><span class="small">EN C1 · DE B1 · ES native</span></div></div>
+      <div class="cell"><canvas data-mosaic="product" aria-hidden="true"></canvas></div>
+      <div class="cell"><canvas data-mosaic="strategy" aria-hidden="true"></canvas></div>
+      <div class="cell"><canvas data-mosaic="graphic" aria-hidden="true"></canvas></div>
+    </div>
+  </div>
+
+  <section id="about" class="band tint">
+    <div class="wrap">
+      <div class="sec-head"><span class="idx">01</span><h2>About</h2><p>Two careers, one way of working.</p></div>
+      <div class="pixrule" aria-hidden="true"><i style="--c:var(--magenta)"></i><i style="--c:var(--yellow)"></i><i style="--c:var(--cyan)"></i><i style="--c:var(--lime)"></i><i style="--c:var(--lavender)"></i></div>
+      <div class="about">
+        <div class="body">
+          <p class="big">I compete for Argentina in Olympic-style taekwondo and I'm finishing a design degree at the same time.</p>
+          <p>I designed, pitched and funded my own sport project: identity, website, deck and the conversations that turned brands into backers. I've lived on my own since I was a teenager, and I manage my own time, budget and team.</p>
+          <p>People pick me for teams because I sort out the mess, connect people and turn big, fuzzy ideas into plans that ship. I like dilemmas, spotting opportunities and presenting the result in front of a room.</p>
+          <div class="traits"><span>Leads naturally</span><span>Public speaking</span><span>Sells ideas</span><span>Grounds complex problems</span><span>Aesthetic judgment</span></div>
+        </div>
+        <dl>
+          <dt class="label">Based</dt><dd>Buenos Aires, open to remote</dd>
+          <dt class="label">Study</dt><dd>B.A. Design, Universidad Torcuato Di Tella (GPA 8.82/10, scholarship 2022), graduating Dec 2026</dd>
+          <dt class="label">Sport</dt><dd>Argentina National Taekwondo Team · 2nd Dan black belt · National Champion 2025 · 4th, Senior Pan American Championships 2026</dd>
+          <dt class="label">Languages</dt><dd>Spanish (native) · English C1 (Cambridge CAE), full professional proficiency · German B1 (DSD I), professional working proficiency</dd>
+          <dt class="label">Tools</dt><dd>Figma, Adobe Suite, HTML/CSS/JS, Rhinoceros, KeyShot, Reaper, Resolume, Microsoft Office</dd>
+        </dl>
+      </div>
+      <div class="cv">
+        <div><h3>Experience</h3><ul>
+          <li><b>Design intern · Barugel Azulay</b><span>Mar–May 2025. Corporate design and visual materials.</span></li>
+          <li><b>Customer service representative · Sensate Inc.</b><span>Nov 2024–Sep 2025. Handled customer inquiries and support tasks.</span></li>
+          <li><b>Design intern · ConAmor</b><span>Jun–Oct 2024. Design adaptations and brand content.</span></li>
+          <li><b>Writing consultant · Remotasks</b><span>Jan–Sep 2024. Evaluated AI responses for quality and accuracy.</span></li>
+          <li><b>Founder · JF Athlete Brand</b><span>2023–now. Self-funded athlete brand with five recurring backers.</span></li>
+        </ul></div>
+        <div><h3>Education</h3><ul>
+          <li><b>B.A. Design · Universidad Torcuato Di Tella</b><span>2023–Dec 2026. GPA 8.82/10. Scholarship recipient, 2022.</span></li>
+          <li><b>High School Diploma, Business Management</b><span>Instituto Primo Capraro, Deutsche Schule Bariloche, 2021. GPA 9.22/10.</span></li>
+          <li><b>Study abroad · Aspen Middle School</b><span>United States, 2018.</span></li>
+        </ul></div>
+        <div><h3>Certificates</h3><ul>
+          <li><b>Cambridge Advanced English (CAE), C1</b><span>University of Cambridge</span></li>
+          <li><b>Deutsches Sprachdiplom I, B1</b><span>Kultusministerkonferenz</span></li>
+          <li><b>Digital Marketing: Community Manager & Advertising</b><span>CoderHouse</span></li>
+          <li><b>2nd Dan Black Belt</b><span>Kukkiwon, WT Taekwondo</span></li>
+        </ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lenses" class="band">
+    <div class="wrap">
+      <div class="sec-head"><span class="idx">02</span><h2>Four lenses</h2><p>The same projects, read for four different roles.</p></div>
+      <div class="lenses" role="group" aria-label="Choose a lens" id="lensbox"></div>
+    </div>
+  </section>
+
+  <section id="work" class="band tint">
+    <div class="wrap">
+      <div class="sec-head"><span class="idx">03</span><h2>Work</h2><p id="workNote">Ten projects, 2024–2026. Open one to see the full case.</p></div>
+      <div class="filters" role="group" aria-label="Filter projects" id="filters"></div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+</div>
+
+<main id="view-case" hidden></main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's<br>work.</h2>
+    <div class="contact"><span class="label">Contact</span><span>hola@juanitafuentes.com</span><a href="https://www.linkedin.com/in/juanitafuentes" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://www.behance.net/lifuentes" target="_blank" rel="noopener">Behance ↗</a><a href="https://www.instagram.com/juanii.fuentes" target="_blank" rel="noopener">Instagram ↗</a></div>
+  </div>
+</footer>
+
+<script>
+const IMG = {"anti_02": "images/anti_02.webp", "anti_03": "images/anti_03.webp", "anti_05": "images/anti_05.webp", "anti_08": "images/anti_08.webp", "anti_09": "images/anti_09.webp", "anti_13": "images/anti_13.webp", "anti_17": "images/anti_17.webp", "anti_18": "images/anti_18.webp", "anti_22": "images/anti_22.webp", "anti_cover": "images/anti_cover.webp", "atlas1": "images/atlas1.webp", "atlas2": "images/atlas2.webp", "atlas7": "images/atlas7.webp", "atlas8": "images/atlas8.webp", "cabildo": "images/cabildo.webp", "cb_panel": "images/cb_panel.webp", "clip_anti-scroll": "images/clip_anti-scroll.webp", "clip_move-community": "images/clip_move-community.webp", "clip_move-create": "images/clip_move-create.webp", "clip_move-join": "images/clip_move-join.webp", "clip_move-onboarding": "images/clip_move-onboarding.webp", "clip_move-profile": "images/clip_move-profile.webp", "clip_olimpicos-box": "images/clip_olimpicos-box.webp", "clip_olimpicos-cards": "images/clip_olimpicos-cards.webp", "deck1": "images/deck1.webp", "deck2": "images/deck2.webp", "doma12": "images/doma12.webp", "doma2": "images/doma2.webp", "doma3": "images/doma3.webp", "doma6": "images/doma6.webp", "doma7": "images/doma7.webp", "doma9": "images/doma9.webp", "m1": "images/m1.webp", "m2": "images/m2.webp", "m3": "images/m3.webp", "m4": "images/m4.webp", "m5": "images/m5.webp", "mv_community": "images/mv_community.webp", "mv_cover": "images/mv_cover.webp", "mv_feed": "images/mv_feed.webp", "mv_hero3d": "images/mv_hero3d.webp", "mv_join": "images/mv_join.webp", "mv_login": "images/mv_login.webp", "mv_research": "images/mv_research.webp", "mv_uikit": "images/mv_uikit.webp", "o_comm": "images/o_comm.webp", "o_occ": "images/o_occ.webp", "o_panel": "images/o_panel.webp", "o_role": "images/o_role.webp", "o_stats": "images/o_stats.webp", "o_venue": "images/o_venue.webp", "ol_box_totes": "images/ol_box_totes.webp", "ol_card_back": "images/ol_card_back.webp", "ol_card_front": "images/ol_card_front.webp", "ol_cards1": "images/ol_cards1.webp", "ol_cards2": "images/ol_cards2.webp", "ol_case": "images/ol_case.webp", "ol_cup": "images/ol_cup.webp", "ol_cup_top": "images/ol_cup_top.webp", "ol_iman": "images/ol_iman.webp", "ol_kit": "images/ol_kit.webp", "ol_kit2": "images/ol_kit2.webp", "ol_manual1": "images/ol_manual1.webp", "ol_manual3": "images/ol_manual3.webp", "ol_manual5": "images/ol_manual5.webp", "ol_manual7": "images/ol_manual7.webp", "ol_manual9": "images/ol_manual9.webp", "ol_table": "images/ol_table.webp", "ol_tote1": "images/ol_tote1.webp", "ol_totes": "images/ol_totes.webp", "ol_totes2": "images/ol_totes2.webp", "pulso1": "images/pulso1.webp", "pulso11": "images/pulso11.webp", "pulso15": "images/pulso15.webp", "pulso19": "images/pulso19.webp", "pulso23": "images/pulso23.webp", "pulso4": "images/pulso4.webp", "pulso6": "images/pulso6.webp", "s_cal": "images/s_cal.webp", "s_goals": "images/s_goals.webp", "s_home": "images/s_home.webp", "s_login": "images/s_login.webp", "s_plans": "images/s_plans.webp", "s_profile": "images/s_profile.webp", "s_sports": "images/s_sports.webp", "sombrilla": "images/sombrilla.webp", "tarantino_bars": "images/tarantino_bars.webp", "tarantino_radial": "images/tarantino_radial.webp", "tkd_banner": "images/tkd_banner.webp", "tkd_fight": "images/tkd_fight.webp", "tkd_flag": "images/tkd_flag.webp", "tkd_flag2": "images/tkd_flag2.webp", "tkd_jadar": "images/tkd_jadar.webp", "tkd_jadar_wide": "images/tkd_jadar_wide.webp", "tkd_shirt": "images/tkd_shirt.webp", "vu_laws": "images/vu_laws.webp", "vu_panel1": "images/vu_panel1.webp", "vu_panel2": "images/vu_panel2.webp", "vu_panel3": "images/vu_panel3.webp", "vu_render": "images/vu_render.webp"};
+const C = {sport:'#EC1E7F',strategy:'#FFC600',product:'#14D4F4',graphic:'#ABF28A',lav:'#B08BD0'};
+const LENS = {
+  sport:{name:'Sport Design',short:'Sport',what:'UX/UI and brands for sport and high performance, from someone who competes.'},
+  strategy:{name:'Strategic Design',short:'Strategy',what:'Business proposals, campaign plans with KPIs, and presentations that get approved.'},
+  product:{name:'Digital Product',short:'Product',what:'User research, apps and platforms, prototyped and coded in HTML/CSS/JS.'},
+  graphic:{name:'Graphic Design',short:'Graphic',what:'Identity, editorial, data visualization and objects you can hold.'}
+};
+const PAIR = {sport:['#EC1E7F','#FFC600'],strategy:['#FFC600','#B08BD0'],product:['#14D4F4','#B08BD0'],graphic:['#ABF28A','#14D4F4'],strategy2:['#FFC600','#EC1E7F'],sport2:['#EC1E7F','#B08BD0']};
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+
+/* ---------- generative pixels ---------- */
+function rng(seed){let s=0;for(const ch of seed)s=(s*31+ch.charCodeAt(0))>>>0;return()=>{s=(s*1664525+1013904223)>>>0;return s/4294967296}}
+function hex(h){h=h.replace('#','');return[0,2,4].map(i=>parseInt(h.slice(i,i+2),16))}
+function mix(a,b,t){return a.map((v,i)=>Math.round(v+(b[i]-v)*t))}
+function prep(cv){const r=cv.getBoundingClientRect();if(!r.width||!r.height)return null;const d=Math.min(2,devicePixelRatio||1);cv.width=r.width*d;cv.height=r.height*d;const g=cv.getContext('2d');g.scale(d,d);return[g,r]}
+function mosaic(cv,key){
+  const p=prep(cv);if(!p)return;const[g,r]=p;
+  const R=rng(key+(cv.dataset.seed||'')),[c1,c2]=(PAIR[key]||PAIR.sport).map(hex),white=cv.dataset.white;
+  const N=Math.max(10,Math.round(r.width/16)),cs=r.width/N,M=Math.ceil(r.height/cs),asp=r.height/r.width;
+  const photo=cv.dataset.photo&&IMG[cv.dataset.photo];
+  if(photo&&!cv._img){const im=new Image();im.onload=()=>{cv._img=im;mosaic(cv,key)};im.src=photo;cv._img=null;return}
+  const balls=photo?[{x:.52,y:.42,r:.24},{x:.42,y:.72,r:.2},{x:.66,y:.66,r:.16},{x:.36,y:.36,r:.14}]:[...Array(3+Math.floor(R()*2))].map(()=>({x:.2+R()*.6,y:.2+R()*.6,r:.09+R()*.08}));
+  let off=null;if(photo&&cv._img){off=document.createElement('canvas');off.width=r.width;off.height=r.height;const s=Math.max(r.width/cv._img.width,r.height/cv._img.height),w=cv._img.width*s,h=cv._img.height*s;off.getContext('2d').drawImage(cv._img,(r.width-w)/2,(r.height-h)/2,w,h)}
+  for(let j=0;j<M;j++)for(let i=0;i<N;i++){
+    const x=(i+.5)/N,y=(j+.5)*cs/r.height;let f=0;
+    for(const b of balls){const dx=x-b.x,dy=(y-b.y)*asp;f+=b.r*b.r/(dx*dx+dy*dy+1e-4)}
+    if(f<.75)continue;
+    const col=white?[255,255,255]:mix(c1,c2,Math.min(1,Math.max(0,x*.6+y*.4+(R()-.5)*.25)));
+    if(off){
+      if(f<1.25){g.fillStyle=`rgba(${col},.55)`;for(let a=0;a<3;a++)for(let b=0;b<3;b++)if((a+b)%2===0)g.fillRect(i*cs+a*cs/3,j*cs+b*cs/3,cs/3,cs/3)}
+      else g.drawImage(off,i*cs,j*cs,cs,cs,i*cs,j*cs,cs+.5,cs+.5);
+      continue}
+    if(f<1.25){g.fillStyle=`rgba(${col},${white?.5:.45})`;for(let a=0;a<3;a++)for(let b=0;b<3;b++)if((a+b)%2===0)g.fillRect(i*cs+a*cs/3,j*cs+b*cs/3,cs/3,cs/3)}
+    else{g.fillStyle=`rgba(${col},${white?.7:1})`;g.fillRect(i*cs,j*cs,cs+.5,cs+.5)}
+  }
+}
+function head(cv,key){
+  const p=prep(cv);if(!p)return;const[g,r]=p;
+  const R=rng('head'+key+(cv.dataset.seed||'')),[c1,c2]=PAIR[key].map(hex),N=12,cs=Math.min(r.width,r.height)/N,ox=r.width-cs*N,oy=0,top=2+Math.floor(R()*2),bot=11,left=3,right=9;
+  const px=(i,j,col)=>{g.fillStyle=col;g.fillRect(ox+i*cs,oy+j*cs,cs+.5,cs+.5)};
+  for(let j=top;j<bot;j++)for(let i=left-(j>5&&j<9?1:0);i<right+(j>4&&j<8?1:0);i++){if(j===top&&R()<.35)continue;px(i,j,`rgb(${mix(c1,c2,Math.min(1,(j-top)/(bot-top)*.8+R()*.25))})`)}
+  for(let k=0;k<3;k++)px(left+1+Math.floor(R()*5),top-1,`rgb(${c2})`);
+  const ey=top+3;[[4,5],[7,8]].forEach(([w,b])=>{px(w,ey,'#fff');px(b,ey,'#17131F')});
+}
+
+/* ---------- content ---------- */
+const P = [
+ {id:'tkd',t:'JF Athlete',full:'JF Athlete Brand',y:'2023–now',d:'My own athlete brand: identity, mascot, pitch, web and five recurring backers.',l:['sport','strategy','graphic'],lead:'sport',
+  kicker:'Self-funded athlete brand',sub:'I built a brand around my sports career, pitched it, and got it funded.',
+  glance:[['Type','Personal project'],['When','2023–now'],['Team','Me + the support team I coordinate'],['Backers','5 recurring']],
+  inshort:'An Olympic-style taekwondo career costs more than a student can pay. I treated it as a design problem: I created a brand, wrote and designed the pitch, built the website and went out to sell it. Today five organizations fund the project every month, and brands invite me to their activations.',
+  brief:'Fund an international sports career with no agency, no budget and no network.',did:'Strategy, identity, mascot, deck, website (design + code), apparel, content and sponsor relations.',result:'5 recurring backers and a paid brand activation.',
+  blocks:[
+   {label:'Context',lede:'The road to the Olympics is long, expensive and has no guaranteed funding.',text:'I started taekwondo at 7 in Bariloche, competed from 12 and first represented Argentina abroad at 16. Since 2022 I live in Buenos Aires, where I train twice a day and study design. Travel, camps and international tournaments are paid out of pocket.',pics:[['tkd_jadar_wide','Competing for Argentina, JADAR Games 2025']],cols:1},
+   {label:'Approach',lede:'Sell commitment, not just a logo spot.',text:'I approached brands through social media and in person, telling the story behind the project. What each backer gets is clear and repeatable:',list:['Their logo on my competition flag and team shirt, at every camp and tournament.','Mentions and thanks in every post on @juanii.tkd.','Content and brand activations with an athlete who is visible in the sport.']},
+   {label:'Identity',lede:'A JF monogram, a primary palette and one line: “sí, hacelo” (yes, do it).',text:'The system had to work on a shirt, a flag, a deck and a website, from sticker size to banner size.',pics:[['tkd_banner','Sponsor flag: “Lo hacemos en equipo” (we do it as a team)'],['deck1','Sponsorship deck, cover']],cols:2},
+   {label:'Character',lede:'An original mascot built from modular color blocks.',text:'Five poses: kick, meditation, focus, celebration and guard. I printed it as stickers and handed them out at the Pan American Championships in Brazil so people would remember me.',pics:[['m1','Kick'],['m2','Meditation'],['m3','Focus'],['m4','Celebration'],['m5','Guard']],cols:5},
+   {label:'Pitch & web',lede:'I wrote, designed and presented the sponsorship deck myself.',pics:[['deck2','Deck: why now is the moment to back the project']],cols:1,narrow:true,text:'I also designed and coded juanitafuentes.com and set up dedicated inboxes for general contact, sponsors and press, so the project looks and works like a professional one.',link:['Visit juanitafuentes.com','https://juanitafuentes.com']},
+   {label:'Apparel',lede:'The flag and shirt travel to every camp and competition.',text:'I designed both, vectorized every sponsor logo that wasn’t already in vector, and printed the shirts myself.',pics:[['tkd_flag','Training camp, Itaboraí, Brazil'],['tkd_flag2','Sesc +esporte, Rio de Janeiro']],cols:2},
+   {label:'Outcome',kind:'facts',items:[['5','recurring backers: Fiberty (main), Río Negro Sports Scholarship, Don José Seafood, Zona Urbana Supplements, ThinkFit'],['3','brands in a paid activation: Calm, Pasito and Decathlon'],['4th','Senior Pan American Championships, Brazil 2026'],['#1','National Champion 2025']],text:'I also coordinate an interdisciplinary team of coaches, a sports psychologist, a nutritionist and physicians. Next: qualifying for the Lima 2027 Pan American Games and the LA 2028 Olympic cycle.',videos:[['Brand activation reel','Calm · Pasito · Decathlon, as a micro-influencer','Instagram','https://www.instagram.com/reel/Db3LvtzRXg9/']],quote:{h:'Commitment is <em>the product.</em>',sub:'What sponsors buy is a person willing to give everything, told through a coherent visual system.',hl:'var(--lime)'}}
+  ]},
+ {id:'olympic',t:'Olympic',y:'2025',d:'A two-sided sports marketplace, from research with ~180 people to two apps and a launch plan.',l:['strategy','sport','product'],lead:'strategy',
+  kicker:'Two-sided sports marketplace',sub:'From research to launch plan: a platform that connects amateur athletes, courts and coaches in Buenos Aires.',
+  glance:[['Course','Marketing, UTDT'],['When','Aug–Dec 2025'],['Team','7 people'],['Grade','10/10']],
+  inshort:'Olympic is a marketplace app for amateur sport. Players find courts, coaches, tournaments and, above all, people to play with. Venues and coaches get a tool to manage bookings and reach new clients. I led the concept, the research, both apps, the brand and the launch plan.',
+  brief:'Design a new business and its full marketing plan, from research to KPIs.',did:'Concept, research instruments, brand identity, both apps, strategy and presentation. The team covered feasibility, development scope and market data.',result:'Graded 10/10.',
+  blocks:[
+   {label:'Context',lede:'In Buenos Aires, amateur sport runs on WhatsApp groups.',text:'Players struggle to find courts, coaches and people to play with, and games get cancelled when someone drops out. Venue owners and coaches juggle bookings, payments and no-shows by hand, through calls, chats and spreadsheets.'},
+   {label:'Research',kind:'stats',lede:'Two surveys, one for each side of the market, with ~180 respondents in total.',text:'I wrote both questionnaires: one for players aged 18–35 in Buenos Aires and its metro area, one for coaches and venue owners. They covered habits, how people organize sport today, pain points and interest in an app.',quote:{h:'Falta uno, ese sos <em>vos.</em>',sub:'“We’re one player short. That’s you.” People see sport as social. The differentiator isn’t booking. It’s belonging.'}},
+   {label:'Market',kind:'table',lede:'Competitors solve the booking. Nobody solves the people.',head:['Player','What it does','Gap'],rows:[['Playtomic','Court booking and payments for racket sports','No social layer beyond the match'],['AlquilaTuCancha','Court rental listings','Booking only'],['Sporty','Booking for local venues','No community or coaches'],['Olympic','Courts, coaches, tournaments and people to play with, in one place','Built around community','us']]},
+   {label:'Strategy',kind:'did',lede:'Who it’s for, how it’s positioned, how it makes money.',items:[['Segments','Primary: YouthBoost, students aged 15–21 who train for body and mind and value the social side. Secondary: Social Athletes, 22–35, who play with friends and rent courts.'],['Positioning','The everyday sports app that connects people, courts and coaches, where sport is a shared experience that drives health and connection.'],['Business model','Low commissions per transaction, visibility subscriptions for providers, aggregated market data and sponsored local tournaments.'],['Pricing','Free for players while the community grows. Providers pay a subscription by category and usage, with discounts for annual plans.']]},
+   {label:'Product',kind:'flow',lede:'Two apps, one ecosystem.',text:'One app for players, one for venues and coaches. Pick an app to follow its journey step by step.'},
+   {label:'Identity',kind:'did',lede:'A brand that feels like a podium, made for every day.',items:[['Mark','A monogram built from a gold “Y” that reads as a torch and a podium, inspired by the Olympics, set in Helvetica.','pal'],['Voice','Fresh, close and optimistic. Real people training in parks and courts, mixed groups, real laughs.']]},
+   {label:'Go-to-market',kind:'funnel',lede:'A launch campaign with three goals: recall, adoption and positioning.',text:'The media mix covers TikTok and Reels, micro-influencers from sport and wellness, out-of-home near gyms and parks, and live events like group runs and tournaments. Each channel has its own KPIs along the AIDA funnel.',videos:[['Campaign spot 1','For players and venues','YouTube','https://www.youtube.com/shorts/UUknl0tqiyE'],['Campaign spot 2','For players and venues','Google Drive','https://drive.google.com/file/d/1GWHjDeMfqwHm-rKWAYdN8HzGgT_9AP8B/view?usp=drivesdk']],note:'Campaign videos and out-of-home pieces were made by the team.'}
+  ]},
+ {id:'atlas',t:'Atlas',y:'2026',d:'A participatory platform for reading shared urban territories. My thesis, designed and coded.',l:['product','strategy','graphic'],lead:'product',
+  kicker:'Thesis · participatory platform',sub:'A participatory map for reading Buenos Aires’ green spaces, where citizens, companies and the state all have a stake.',
+  glance:[['Course','LAB VIII (thesis), UTDT'],['When','2026'],['Team','With Camila Oro and Camila Zita'],['Status','Final stage']],
+  inshort:'In a shared territory, information is scattered and some voices weigh more than others. Atlas is a method and a web platform that gathers sources, organizes them by theme and voice, and lets anyone build and discuss their own reading of a place. The pilot is Parque Ferroviario Colegiales.',
+  brief:'Design a participatory method to read complex, shared territories.',did:'I design and code the web platform, the core of the project.',result:'A live platform with a pilot park and a second park for comparison.',
+  blocks:[
+   {label:'Context',lede:'Information is scattered, and some voices weigh more than others.',text:'Citizens bring everyday experience, the public sector brings regulation and management, the private sector brings knowledge and capacity. Without a shared view, it is hard to understand a territory and decide how to act. Atlas doesn’t produce a solution; it produces the conditions to build and discuss one.'},
+   {label:'Method',lede:'Collect, process, explore. In a loop.',list:['<b>Collect.</b> Public sources, surveys, sensors and contributions. Every datum keeps its source and date.','<b>Process.</b> Data is organized by theme and voice, in 13 themes and 5 layers, to surface agreements, tensions and gaps.','<b>Explore.</b> Users pick a lens, cross-check the evidence and build a report they can cite or present.']},
+   {label:'Platform',lede:'Choose a perspective, enter the park, leave your mark.',list:['<b>Lens switch.</b> The same park reads differently for citizens, the public sector or the private sector.','<b>Guided walk.</b> A scroll-driven walk from the city (203 km², 48 neighborhoods, 15 communes) down to the park, in five stations.','<b>Map and contributions.</b> An interactive park map, a tool to pin observations, and a report tray to collect evidence.','<b>Compare.</b> Parque Centenario as a second park, to test whether the categories work in another territory.'],text:'Real data is marked as verified; example data is labeled as simulated until sensors and surveys are connected.',link:['Open the live platform','https://juanit4.github.io/ATLAS-VERSION-FINAL-FINAL/#intro']},
+   {label:'Beyond the screen',lede:'A subtle, itinerant intervention in the park itself.',text:'The project also proposes a physical piece that rotates through public green spaces, using what is already there instead of interrupting it. A teammate leads that part. A short manifesto video, narrated by us, is in production.'}
+  ]},
+ {id:'move',t:'Move',y:'2025',d:'A social sports app that turns motivation into something you share.',l:['product','sport'],
+  kicker:'Mobile app · UX/UI',sub:'A social sports app that turns motivation into something you share.',
+  glance:[['Course','Interaction Design, UTDT'],['When','2025'],['Team','Trio, with Mora Jáuregui and Matilda Alabes'],['Grade','10/10']],
+  inshort:'Many people struggle to start or keep a sports routine. Our interviews showed that what keeps people going isn’t tracking, it’s company. Move is a mobile platform that connects people through sport: join activities others create, schedule your own, set goals, take on challenges with friends and get help from health professionals.',
+  brief:'Design an interactive digital product, from research to a high-fidelity prototype.',did:'Everything, as an equal team of three: idea, paper sketches, interviews, hypothesis, prototypes, interface, UI components and presentation.',result:'Graded 10/10.',
+  blocks:[
+   {label:'Context',lede:'People don’t quit sport for lack of options. They quit for lack of company.',text:'Most sports apps track progress or health and feel individual. We designed for motivation instead: the first push, the company and the reasons to come back.',pics:[['mv_cover','Move, with motivation']],cols:1},
+   {label:'Research',lede:'Interviews pointed to four insights.',list:['<b>Team over solo.</b> People prefer sport with others: shared interests and plans beyond the game.','<b>Easier together.</b> Starting with someone means less embarrassment and no facing the unknown alone.','<b>Commitment wins.</b> Responsibility to someone else beats a lack of motivation.','<b>Monotony kills it.</b> People drop sports when routines get repetitive.'],text:'We turned them into six points of view, such as “Laura needs a friend to come to pilates because she’s embarrassed to be the only new one.”',pics:[['mv_research','Chosen user, insights and POVs']],cols:1,narrow:true},
+   {label:'Prototype',kind:'clips',lede:'The prototype, in motion.',text:'Recorded from the Figma prototype. Each tap is marked with a circle.',clips:[['move-onboarding','Onboarding','Sports, motivations and traits shape what the app suggests.'],['move-join','Join an activity','See who’s going, invite friends and book your spot.'],['move-create','Create your own','Schedule a game and open it to others.'],['move-profile','Profile & challenges','Goals, progress rings and shared challenges.'],['move-community','Community','Chats with friends, teams and professionals.']]},
+   {label:'Flows',lede:'Every flow, mapped screen by screen.',text:'Home feed, joining an activity, booking states, calendar, community, notifications and profiles, each annotated.',pics:[['mv_feed','Home feed and creating an activity'],['mv_join','Joining an activity and booking states'],['mv_community','Community and notifications']],cols:3},
+   {label:'UI kit',lede:'A dark interface: lime for action, red for what’s missing.',text:'Manrope in five weights, a sport icon set, and buttons, pills and cards that change with the state of each booking.',pics:[['mv_uikit','Palette, type, icons and components'],['mv_hero3d','Final screens']],cols:2},
+   {label:'Outcome',lede:'Graded 10/10.',text:'One of the best teams I’ve worked in: every decision was made together.',quote:{h:'Move <em>with motivation.</em>',hl:'var(--lime)'}}
+  ]},
+ {id:'olimpicos',t:'Olímpicos!',y:'2026',d:'A strategy board game about Olympic champions, designed and produced entirely by hand.',l:['graphic','sport','product'],lead:'graphic',
+  kicker:'Board game · identity · production',sub:'A strategy board game about what it takes to become an Olympic champion, made by hand from rules to the last card.',
+  glance:[['Course','LAB VII, Analog Games, UTDT'],['When','2026'],['Team','Duo, with Camila Zita'],['Grade','10/10']],
+  inshort:'Olímpicos! is a strategy game for four players: collect skills, react before your rivals and win the sports on your secret tournament card. We designed the mechanics, the identity, every illustration and every piece, and produced it ourselves: hand-applied relief on every card, a handmade box and screen-printed totes.',
+  brief:'Design an analog game, from rules to a finished physical object.',did:'Everything, together with Camila: mechanics, identity, illustration, manual, packaging, accessories and hand production.',result:'Graded 10/10.',
+  blocks:[
+   {label:'Concept',lede:'“Behind every Olympic champion there is a great strategy.”',text:'Each round reveals a sport and runs in three phases: battle for skills, steal the cup, negotiate. Only the player who makes the best decisions completes their tournament card.',pics:[['ol_kit','Box, manual, stickers and the first cards']],cols:1},
+   {label:'In 3D',kind:'obj3d',lede:'Turn the card around.',text:'Sport card 01, Taekwondo, with its pattern on the back. Drag to rotate it. Every illustration on the printed cards carries a hand-applied DTF relief.'},
+   {label:'System',kind:'did',cols:2,lede:'Five kinds of cards, one cup and a dice.',items:[['Sport cards','30 sports, each with a real Olympic story: Crismanich, Bolt, Phelps, Comăneci and more.'],['Skill cards','75 cards across six skills, from strength to coordination.'],['Plan & tournament','30 plan cards and 9 secret tournament cards that set each player’s goal.'],['Positive & negative','20 boosts and 20 setbacks, from Motivation and Coach to Doping, Cramps and Anxiety.']],pics:[['ol_cards1','Sport cards'],['ol_cup','Cup, decks and dice in play']],cols:2},
+   {label:'Identity',lede:'Retro Olympic lettering, five colors, wave patterns.',text:'An inline display type, a palette of green, orange, yellow, violet and red, and patterns that run from the box to the stickers.',pics:[['ol_iman','Logo, illustrations and patterns'],['ol_manual1','Manual cover']],cols:2},
+   {label:'Manual',lede:'Rules you can learn in one read.',pics:[['ol_manual3','Card types'],['ol_manual5','Game setup'],['ol_manual7','The first phase']],cols:3},
+   {label:'Made by hand',kind:'clips',lede:'Every piece, produced by us.',list:['Every illustration applied by hand in DTF, so all cards have a tactile relief.','Matte-laminated cards.','A handmade box in cardboard and vinyl.','Screen-printed tote bags, stickers and a holographic sticker sheet.'],clips:[['olimpicos-box','The box','Handmade in cardboard and vinyl.'],['olimpicos-cards','The cards','Hand-applied relief on every illustration.']],pics:[['ol_table','A full game, from above'],['ol_totes2','Screen-printed totes']],cols:2},
+   {label:'Outcome',lede:'Graded 10/10.',quote:{h:'Cada campeón tiene <em>una historia.</em>',sub:'“Every champion has a story.” The line on the totes, and the idea behind every card.',hl:'var(--yellow)'}}
+  ]},
+
+ {id:'pulso',t:'Pulso',y:'2025',d:'Identity and social strategy for a podcast about body, culture and emotional survival in sport.',l:['graphic','sport'],
+  kicker:'Podcast identity & social strategy',sub:'A podcast about body, culture and emotional survival in sport, told by three athletes.',
+  glance:[['Team','With Catalina Kostic and Camila Zita'],['When','2025'],['Format','4 episodes + Instagram'],['Starting point','Rocky (1976)']],
+  inshort:'We started from Rocky and asked where the real fight happens. Pulso is a four-episode narrative podcast where three friends and athletes talk about self-talk, the people around you, extreme sacrifice and what winning means, with an identity and an Instagram plan that hand the mic to listeners.',
+  brief:'Create a podcast and its extended narrative across platforms.',did:'I came up with the idea, made most of the graphics and voiced part of the trailer. My strongest part: turning the concept into something concrete. I host the episode on food and pre-fight rituals.',result:'Four episodes, an identity system and an Instagram plan.',
+  blocks:[
+   {label:'Concept',lede:'From Rocky to the fight inside.',text:'We first pictured a podcast describing tensions in sport “from the outside”. After several revisions we found the real angle: we were the protagonists. Three women, athletes and friends, opening a genuine space for other women in sport.',pics:[['pulso1','Starting point: Rocky'],['pulso4','The podcast']],cols:2},
+   {label:'Episodes',kind:'did',lede:'Four episodes, each one a different side of training.',items:[['01 · Self-talk','Camila Zita, track athlete, on the trap of self-demand and invisible fatigue.'],['02 · Environment','Catalina Kostic, volleyball, on how a toxic team undermined her and how a new one made them three-time champions.'],['03 · Food & rituals','Me, taekwondo: weight cuts, the sauna, and how far you can push your body before a fight.'],['04 · What is success?','The three of us on victory, frustration and comparison.']]},
+   {label:'Listen',kind:'audio',lede:'The trailer.',src:'media/pulso-trailer.mp3',title:'Pulso · Trailer',who:'Camila Zita, Catalina Kostic and Juanita Fuentes',dur:124},
+   {label:'Identity',lede:'Lilac, blue and lemon, with a modular cover system.',text:'Each episode cover marks which voices are speaking, so the series reads as one system. Audience: women aged 16–35 who play sport, and anyone interested in mental health and sport culture.',pics:[['pulso6','Episode covers'],['pulso23','Palette, type and iconography']],cols:2},
+   {label:'Social',lede:'Instagram as the place where listeners get the mic.',text:'Stories with questions and polls, carousels with practical tips, and a highlight per host, so the conversation continues after the episode.',pics:[['pulso11','Profile'],['pulso15','Carousel'],['pulso19','Participatory stories']],cols:3}
+  ]},
+ {id:'doma',t:'DOMA',full:'DOMA Resignificación',y:'2025',d:'A collaboration system that turns a premium brand’s idle leather into new products. Now in development.',l:['strategy'],
+  kicker:'Strategic design for a real brand',sub:'Turning idle stock into a collaborative brand system, without diluting exclusivity.',
+  glance:[['Course','Strategic Design Mgmt., UTDT'],['When','2025'],['Team','5 people'],['Client','DOMA, mentored by its founder']],
+  inshort:'DOMA is an Argentine premium leather apparel brand founded in 2004. It had imported leather and unsold garments sitting idle. I proposed giving that material a second life through collaborations with local producers and niche brands, and the founder is now developing one of them.',
+  brief:'Find new value for idle stock without hurting a premium brand.',did:'The core proposal, the “DOMA Resignificación” identity and the presentation.',result:'DOMA × Cúmulo, with an Argentine design furniture maker, is in development.',
+  blocks:[
+   {label:'Context',lede:'Leather and unsold garments sat idle in storage, costing money every month.',text:'DOMA’s clients buy identity, and the brand’s value lives in its exclusivity. Any answer had to create revenue without turning the stock into a discount sale.',pics:[['doma3','Brand world']],cols:1},
+   {label:'Diagnosis',lede:'The leather wasn’t the problem. It had nowhere to go.',text:'Our analysis showed an asset with history, intact value and a real environmental cost. A discount sale would damage the exclusivity clients pay for; storing it cost money every month. The opportunity was to give the material a new destination, made with others.'},
+   {label:'Idea',lede:'Let DOMA leather live in new formats, made with others.',text:'A scalable system of collaboration and curation: furniture, art, objects, fragrance, packaging and experiences, made with local producers and niche brands that share DOMA’s values, so they grow together and the material gets a second life.'},
+   {label:'Models',kind:'did',cols:3,lede:'Three ways to partner, from most to least involvement.',items:[['A · Co-production','DOMA supplies leather and co-designs; the partner produces. A shared label for premium interiors and furniture.'],['B · Material + channel','DOMA supplies leather or garments and sells the result; the partner creates with full autonomy.'],['C · Curation','DOMA’s showroom selects and sells third-party work. No product investment.']]},
+   {label:'Intervention',lede:'From proposal to a real partnership: DOMA × Cúmulo.',text:'Cúmulo is an Argentine design furniture maker. Furniture and interiors were the first territory our system pointed to, and our analysis and proposal led DOMA to pursue it. The DOMA × Cúmulo collaboration is now in development with the brand’s founder, who mentored the project.',quote:{h:'Born from <em>our proposal.</em>',hl:'var(--yellow)'}},
+   {label:'System',lede:'Tools to run it, not just a pitch.',text:'Product map, business model canvas, organizational structure, a decision flowchart to choose the right model for each partner, cost structure and a Gantt timeline.',pics:[['doma6','Product map'],['doma9','Decision flow per partner']],cols:2},
+   {label:'Identity',lede:'Olive, oxblood and cream, in Helvetica Neue.',pics:[['doma12','Identity and moodboard']],cols:1,narrow:true}
+  ]},
+ {id:'vuelta',t:'Vuelta Urbana',y:'2024',d:'A public play structure to feel the spin of a backflip, safely, at Centro Cultural Recoleta.',l:['product','sport'],
+  kicker:'Public play structure',sub:'A structure that lets anyone feel the spin of a backflip, safely and with no training.',
+  glance:[['Course','LAB IV, Public Play, UTDT'],['When','2024'],['Team','With Camila Oro and Isabella Monti'],['Site','Centro Cultural Recoleta']],
+  inshort:'For the hip-hop scene in the Patio del Aljibe at Centro Cultural Recoleta, we designed a public game that simulates a backflip: you lie back on a padded curve, push with your feet and complete the turn holding a rail. The goal is to bring hip-hop culture closer to people outside it. Each of us also designed an individual seat in the same system; mine is Chill Beat.',
+  brief:'Design a public game for a real site, from concept to production details.',did:'Concept, form and technical development with the team. Chill Beat, the individual seat, is 100% mine.',result:'Technical documentation, renders on site and an individual piece in the same system.',
+  blocks:[
+   {label:'Context',lede:'What if anyone could feel a backflip?',text:'Users aged 15–25 with some dexterity, in the courtyard where the center’s hip-hop culture lives: graffiti, breakdance and music.',pics:[['vu_render','Vuelta Urbana (center) and Chill Beat (left) in the Patio del Aljibe']],cols:1},
+   {label:'Rules',kind:'did',cols:2,lede:'Rules that guided every decision.',items:[['Semantic','The surroundings reflect urban culture and hip-hop. It feels comfortable for people who never did the move. Colors echo the ones already at the center.'],['Functional','Everything that touches the body is yellow anti-slip rubber. Red galvanized steel, bolted to the ground. Marked entry and exit. Double padding for back and hips.']]},
+   {label:'System',lede:'From concept to exploded view.',text:'Requirements, materials and 20 components, documented one by one.',pics:[['vu_panel1','Concept and requirements'],['vu_panel2','Materials, components and exploded view']],cols:2},
+   {label:'Sequence',lede:'Eight steps to go upside down.',text:'Walk in, grab the rail, lie back on the curve, push with your feet, turn and celebrate. The panel also shows the site plan and real situations of use.',pics:[['vu_panel3','Sequence of use, site plan and situations']],cols:1,narrow:true},
+   {label:'Chill Beat',lede:'My individual piece: a seat to stretch the other way.',text:'Chill Beat lets you stretch your back against the curve Vuelta Urbana proposes, and rest your legs and arms. Welded red steel tube, anti-slip rubber on the rails, a rubber floor plate and ground signage, at about 1.8 × 1.2 × 0.7 m.',pics:[['cb_panel','Chill Beat: use, materials, moodboard and measurements']],cols:1}
+  ]},
+
+ {id:'info',t:'Info Design',full:'The Tarantino Formula',y:'2025',d:'Nine films as data, a building in layers, a task in four steps.',l:['graphic'],
+  kicker:'Information design',sub:'Data, space and procedure: three ways of making information visible.',
+  glance:[['Course','Information Visualization, UTDT'],['When','2025'],['Team','Duo, with Camila Zita'],['Grade','10/10 on all three']],
+  inshort:'Three information design projects, each with a different kind of content: a dataset about Quentin Tarantino’s films, the architectural history of Buenos Aires’ Cabildo, and a step-by-step guide to a beach umbrella.',
+  brief:'Make complex information readable at a glance.',did:'Co-designed all three pieces, from data gathering to final layout.',result:'10/10 on each project.',
+  blocks:[
+   {label:'Data',lede:'The Tarantino Formula: nine films by runtime, action, blood, actors and weapons.',text:'A radial chart maps each film minute by minute, and a second chart crosses audience turnout with profitability. Built from data gathered across 9 sources, including Box Office Mojo, IMDb and The Numbers.',pics:[['tarantino_radial','The formula: actors, blood and more'],['tarantino_bars','Most profitable and most popular films']],cols:2},
+   {label:'Space',lede:'Views and levels of the Cabildo.',text:'A technical illustration of Buenos Aires’ colonial town hall: its changes from 1725 to 1940, from street level down to the tunnels.',pics:[['cabildo','Views and levels of the Cabildo']],cols:1,narrow:true},
+   {label:'Procedure',lede:'Set up your beach umbrella in 4 steps.',text:'A physical task turned into a clear visual sequence.',pics:[['sombrilla','Instructional guide']],cols:1,narrow:true}
+  ]},
+
+ {id:'anti',t:'ANTI',y:'2024',d:'Makeup as camouflage against facial recognition: an editorial object against AI beauty standards.',l:['graphic','strategy'],
+  kicker:'Concept & editorial design',sub:'An editorial object against the beauty standards that AI keeps reinforcing.',
+  glance:[['Course','Visual Studies, UTDT'],['When','2024'],['Team','Duo, with Valentina Vanini'],['Format','Editorial object + GIFs']],
+  inshort:'Facial recognition measures every face against the same standard. ANTI answers with makeup as camouflage: break the face’s symmetry and the algorithm stops recognizing you as human, which exposes its own standard. Not a magazine, not a photobook, not a fanzine. Anti-definition.',
+  brief:'Turn the course theory into a visual piece.',did:'Everything, together with Valentina: concept, link to theory, research, makeup, photo shoot, editorial design and GIFs.',result:'A finished editorial piece, published on Behance.',
+  blocks:[
+   {label:'Theory',lede:'AI compares. We refuse to be compared.',text:'From Éric Sadin: AI reads only the surface of the real and works through constant comparison, a benchmarking that turns difference into error. From Huyssen: there is no innocent machine; detectors decide what counts as normal and what stays hidden.'},
+   {label:'Idea',lede:'Makeup as camouflage.',text:'Darken an eye, hide the mouth, break the symmetry: the face stops matching the pattern. We designed looks to do exactly that and tested what the software could still recognize.',pics:[['anti_cover','“ERROR: Unable to detect any faces.”']],cols:1,narrow:true},
+   {label:'Editorial',lede:'Color fields, detection frames and measurements.',text:'Magenta, blue and orange backgrounds, with frames and measurement marks borrowed from recognition software.',pics:[['anti_03','Spread'],['anti_05','Spread'],['anti_08','Spread'],['anti_13','Spread'],['anti_17','Spread'],['anti_22','Closing: pixelated faces']],cols:3},
+   {label:'Motion',kind:'clips',lede:'The closing GIFs.',clips:[['anti-scroll','Closing spread','Faces breaking into pixels as detection fails.','wide']],link:['See the full project on Behance','https://www.behance.net/gallery/202898051/ANTI-somos-revolucion']}
+  ]},
+];
+const STATS=[[55,'Players','feel they lack people to practice sport with.',C.sport],[80,'Players','would use one app for courts, coaches and events.',C.sport],[75,'Players','would start practicing if an app helped them meet people to train with.',C.sport],[80,'Venue owners & coaches','are very interested in centralized bookings and payments.',C.product]];
+const APPS=[
+ {key:'players',name:'Olympic',who:'For players',c:C.sport,help:'The player journey, from sign-up to joining a game. Scroll sideways to follow it.',s:[['s_login','Sign up','Email, username or Apple. One screen, no friction.'],['s_sports','Pick sports','Choosing sports sets what the map and feed show.'],['s_goals','Set goals','Goals like “meet new people” shape the matches suggested.'],['s_home','Find a game','Nearby activities on a map, each showing how many players are missing.'],['s_plans','Plans & chats','Social plans and chats with venues, teams and players.'],['s_cal','Calendar','Upcoming games, marked complete or still missing people.'],['s_profile','Profile','Sports, goals and weekly progress in one place.']]},
+ {key:'owners',name:'Olympic Owners',who:'For venues & coaches',c:C.product,help:'The venue owner’s day, from onboarding to the numbers. Scroll sideways to follow it.',s:[['o_role','Choose role','Venue owner or coach: each gets its own setup.'],['o_occ','Today’s courts','Which courts are booked, which are free, and today’s bookings.'],['o_panel','Control panel','Occupancy, bookings, revenue and online vs. cash payments.'],['o_comm','Community','Messages from players and Olympic opportunities like tournaments.'],['o_stats','Analytics','Weekly occupancy and monthly revenue trends.'],['o_venue','Venue profile','Courts, prices, hours and ratings, editable in place.']]}
+];
+const FUNNEL=[['Awareness','Reach · impressions · CPM · frequency 3–5',100,C.lav],['Interest','Watch time · VTR · engagement rate',80,C.product],['Desire','Shares · saves · event attendance · leads',60,C.strategy],['Action','Downloads · profiles · bookings · QR scans',42,C.sport]];
+
+/* ---------- home ---------- */
+const gpair=p=>PAIR[p.l[0]];
+function tile(p,big){
+  const [g1,g2]=gpair(p);
+  return `<div class="poster-tile" style="--g1:${g1};--g2:${g2}"><canvas data-mosaic="${p.l[0]}" data-seed="${p.id}" data-white="1" aria-hidden="true"></canvas><canvas data-head="${p.l[0]}" data-seed="${p.id}" aria-hidden="true" style="left:auto;width:42%;"></canvas>
+   <div class="top-row"><span class="kick">${esc(p.kicker.split(' · ')[0])}</span>${p.pending?'<span class="flag">Coming</span>':''}<span class="flag leadtag" hidden>Lead case</span></div>
+   <div class="nm">${esc(p.full||p.t)}</div></div>`;
+}
+document.getElementById('lensbox').innerHTML=Object.entries(LENS).map(([k,v])=>{const lead=P.find(p=>p.lead===k);return `<button class="lens" data-lens="${k}" style="--c:${C[k]}" aria-pressed="false"><div class="face"><canvas data-head="${k}" aria-hidden="true"></canvas></div><h3>${v.name.replace(' ','<br>')}</h3><p class="what">${v.what}</p><span class="chip" style="--c:${C[k]}">Lead: ${lead.full||lead.t}</span></button>`}).join('');
+document.getElementById('filters').innerHTML=['all',...Object.keys(LENS)].map(k=>`<button data-f="${k}" aria-pressed="${k==='all'}">${k==='all'?'All':LENS[k].short}</button>`).join('');
+const grid=document.getElementById('grid');
+P.forEach(p=>{
+  const a=document.createElement('a');a.className='card';a.href='#'+p.id;a.dataset.id=p.id;a.setAttribute('aria-label',(p.full||p.t)+', open case');
+  a.innerHTML=`${tile(p)}<div class="meta"><b>${esc(p.full||p.t)}</b><span class="small">${p.y}</span></div><p>${p.d}</p><div class="tags">${p.l.map(k=>`<span class="chip" style="--c:${C[k]}">${LENS[k].short}</span>`).join('')}</div>`;
+  grid.appendChild(a);
+});
+function setLens(k){
+  document.querySelectorAll('#filters button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.f===k));
+  document.querySelectorAll('.lens').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lens===k));
+  const cards=[...grid.children];
+  cards.forEach(c=>{const p=P.find(x=>x.id===c.dataset.id);c.hidden=!(k==='all'||p.l.includes(k));c.querySelector('.leadtag').hidden=!(k!=='all'&&p.lead===k)});
+  cards.forEach(c=>c.classList.remove('feature'));
+  cards.sort((a,b)=>{const pa=P.find(x=>x.id===a.dataset.id),pb=P.find(x=>x.id===b.dataset.id);return (pb.lead===k)-(pa.lead===k)||P.indexOf(pa)-P.indexOf(pb)}).forEach(c=>grid.appendChild(c));
+  const vis=cards.filter(c=>!c.hidden);if(vis.length%2)vis[0].classList.add('feature');
+  document.getElementById('workNote').textContent=k==='all'?'Ten projects, 2024–2026. Open one to see the full case.':LENS[k].name+', with its lead case first.';
+  requestAnimationFrame(drawAll);
+}
+document.getElementById('filters').addEventListener('click',e=>{const b=e.target.closest('button');if(b)setLens(b.dataset.f)});
+document.getElementById('lensbox').addEventListener('click',e=>{const b=e.target.closest('.lens');if(b){setLens(b.dataset.lens);document.getElementById('work').scrollIntoView()}});
+
+/* ---------- case renderer ---------- */
+const link=l=>l?`<a class="linkout" href="${l[1]}" target="_blank" rel="noopener">${esc(l[0])} ↗</a>`:'';
+const pics=b=>b.pics?`<div class="pics c${b.cols||2}" ${b.narrow?'style="max-width:620px"':''}>${b.pics.map(([k,cap])=>`<figure><img src="${IMG[k]}" alt="${esc(cap)}" loading="lazy"><figcaption>${esc(cap)}</figcaption></figure>`).join('')}</div>`:'';
+const list=b=>b.list?`<ul>${b.list.map(x=>`<li>${x}</li>`).join('')}</ul>`:'';
+function videos(b,p){
+  if(!b.videos)return'';const[g1,g2]=gpair(p);
+  return `<div class="media">${b.videos.map(([t,d,where,u],i)=>`<a class="vcard" href="${u}" target="_blank" rel="noopener" style="--g1:${g1};--g2:${g2}"><div class="scr"><canvas data-mosaic="${p.l[0]}" data-seed="${p.id}v${i}" data-white="1" aria-hidden="true"></canvas><span class="play" aria-hidden="true"></span><span class="where">Watch on ${where} ↗</span></div><b>${esc(t)}</b><span class="d">${esc(d)}</span></a>`).join('')}</div>`;
+}
+function renderBlock(b,p,k){
+  const id=`ch-${k+1}`,[g1,g2]=gpair(p);
+  let comp='';
+  switch(b.kind){
+    case 'stats':comp=`<div class="stats">${STATS.map(([v,w,t,c])=>`<div class="stat" style="--c:${c}"><div class="num">${v}%</div><div class="bar" aria-hidden="true">${[...Array(20)].map((_,i)=>`<i class="${i<v/5?'on':''}"></i>`).join('')}</div><span class="label">${w}</span><p>${t}</p></div>`).join('')}</div><p class="aside">All the venue owners and coaches surveyed spend 1 to 3 hours a week on admin, and half of them deal with no-shows frequently.</p>`;break;
+    case 'did':comp=`<div class="did c${b.cols||2}">${b.items.map(([h,t,x])=>`<div><h3>${h}</h3><p>${t}</p>${x==='pal'?'<div class="palette" aria-label="Olympic palette"><i style="background:#000"></i><i style="background:#B08A3E"></i><i style="background:#E07B2E"></i><i style="background:#D9B44A"></i><i style="background:#6E6E6E"></i></div>':''}</div>`).join('')}</div>`;break;
+    case 'table':comp=`<div class="tablewrap"><table class="compare"><thead><tr>${b.head.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${b.rows.map(r=>`<tr class="${r[3]||''}"><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join('')}</tbody></table></div>`;break;
+    case 'funnel':comp=`<div class="funnel">${FUNNEL.map(([k,t,w,c])=>`<div class="fstep" style="--c:${c}"><span class="k">${k}</span><div><div class="b" style="width:${w}%">${t}</div></div></div>`).join('')}</div>`;break;
+    case 'facts':comp=`<div class="facts2">${b.items.map(([v,t])=>`<div><span class="n">${v}</span><p>${t}</p></div>`).join('')}</div>`;break;
+    case 'obj3d':comp=`<div class="obj3d"><div class="stage3d" aria-label="3D card, drag to rotate"><div class="card3d"><div class="edge"></div><div class="f a" style="background-image:url(${IMG.ol_card_front})"></div><div class="f b" style="background-image:url(${IMG.ol_card_back})"></div></div></div><div class="hint"><b style="color:var(--ink)">Drag to rotate</b><span>Front: illustration with relief. Back: the pattern that marks the deck.</span><button type="button" data-flip>Flip card</button></div></div>`;break;
+    case 'clips':comp=`<div class="clips">${b.clips.map(([f,t,d,w])=>`<figure class="clip${w?' wide':''}${f.startsWith('move')?' phone':''}"><video src="media/${f}.mp4" poster="images/clip_${f}.webp" autoplay muted loop playsinline preload="metadata" aria-label="${esc(t)}"></video><figcaption><b>${esc(t)}</b>${esc(d)}</figcaption></figure>`).join('')}</div>`;break;
+    case 'audio':comp=`<div class="player" data-src="${b.src}" data-dur="${b.dur}"><button class="pbtn" aria-label="Play trailer"><i></i></button><div class="info"><b>${b.title}</b><span class="small" style="color:var(--ink-2)">${b.who}</span><div class="wave" aria-hidden="true">${[...Array(64)].map((_,i)=>`<i style="height:${Math.round(18+Math.abs(Math.sin(i*1.7)+Math.sin(i*.43))*40)}%"></i>`).join('')}</div><div class="ptime">0:00 / ${Math.floor(b.dur/60)}:${String(b.dur%60).padStart(2,'0')}</div></div></div>`;break;
+    case 'flow':comp=`<div class="apptabs" role="tablist" aria-label="Choose app">${APPS.map((a,i)=>`<button role="tab" id="tab-${a.key}" aria-selected="${i===0}" aria-controls="flow-${a.key}" data-app="${a.key}" style="--c:${a.c}">${a.name} · ${a.who.replace('For ','')}</button>`).join('')}</div>${APPS.map((a,i)=>`<div role="tabpanel" id="flow-${a.key}" aria-labelledby="tab-${a.key}" ${i?'hidden':''}><div class="flow"><ol>${a.s.map(([kk,t,d],j)=>`<li style="--c:${a.c}"><img src="${IMG[kk]}" alt="${a.name}: ${esc(t)}" loading="lazy"><span class="n"><b>${String(j+1).padStart(2,'0')}</b></span><h4>${t}</h4><p>${d}</p></li>`).join('')}</ol></div><p class="aside">Scroll sideways to follow the journey.</p></div>`).join('')}`;break;
+  }
+  const quote=b.quote?`<div class="pull" style="--hl:${b.quote.hl||'var(--yellow)'}"><p class="ph">${b.quote.h}</p>${b.quote.sub?`<p class="ps">${b.quote.sub}</p>`:''}</div>`:'';
+  return `<section class="block" id="${id}"><header><span class="n">${String(k+1).padStart(2,'0')}</span><span class="label">${b.label}</span></header><div class="bc">
+    ${b.lede?`<p class="lede">${b.lede}</p>`:''}${b.text?`<p class="txt">${b.text}</p>`:''}${list(b)}${comp}${pics(b)}${videos(b,p)}${quote}${b.note?`<p class="aside">${b.note}</p>`:''}${link(b.link)}</div></section>`;
+}
+function pendingBlocks(p){
+  const slot=t=>`<div class="slot"><canvas data-mosaic="${p.l[0]}" data-seed="${p.id+t}"></canvas><span>${t}</span></div>`;
+  return ['Context','Process','Design','Outcome'].map((s,i)=>`<section class="block"><header><span class="n">${String(i+1).padStart(2,'0')}</span><span class="label">${s}</span></header><div class="bc"><p class="lede" style="color:var(--ink-2)">${['What the brief was, and for whom.','Research, ideas and iterations.','The final pieces, shown large.','What happened next: grade, feedback, impact.'][i]}<span class="draft">Coming</span></p>${i===2?`<div class="pics c3">${slot('Image')}${slot('Image')}${slot('Image')}</div>`:i===1?`<div class="pics c2">${slot('Process image')}${slot('Process image')}</div>`:''}</div></section>`).join('');
+}
+function renderCase(p){
+  const i=P.indexOf(p),nx=P[(i+1)%P.length],[g1,g2]=gpair(p);
+  const blocks=p.pending?pendingBlocks(p):p.blocks.map((b,k)=>renderBlock(b,p,k)).join('');
+  const chaps=p.pending?'':`<nav class="chapters" aria-label="Sections of this case">${p.blocks.map((b,k)=>`<button data-go="ch-${k+1}"><span>${String(k+1).padStart(2,'0')}</span>${b.label}</button>`).join('')}</nav>`;
+  return `<div class="case-band" style="--g1:${g1};--g2:${g2}"><canvas data-head="${p.l[0]}" data-seed="${p.id}" aria-hidden="true"></canvas><div class="wrap">
+    <div class="case-top"><a class="back" href="#work">← All work</a><div class="chips">${p.l.map(k=>`<span class="chip" style="--c:${C[k]}">${LENS[k].short}${p.lead===k?' · lead case':''}</span>`).join('')}</div></div>
+    <span class="kick">${p.kicker}</span><h1>${esc(p.full||p.t)}</h1><p class="sub">${p.sub}</p></div></div>
+  <div class="wrap">
+    <div class="glance">${p.glance.map(([k,v])=>`<div><span class="label">${k}</span><b>${v}</b></div>`).join('')}</div>
+    ${p.pending?`<div class="summary"><div><span class="label">In short</span><p class="inshort" style="color:var(--ink-2)">Images and the full story are on their way.<span class="draft">Coming</span></p></div><div class="trio"><div><span class="label">My role</span><p>To confirm.</p></div></div></div>`:
+    `<div class="summary"><div><span class="label">In short</span><p class="inshort">${p.inshort}</p></div><div class="trio"><div><span class="label">The brief</span><p>${p.brief}</p></div><div><span class="label">What I did</span><p>${p.did}${p.draftDid?'<span class="draft">To confirm</span>':''}</p></div><div><span class="label">Result</span><p>${p.result}</p></div></div></div>`}
+    ${chaps}${blocks}
+    <div class="next"><span class="label">Next case</span><a href="#${nx.id}"><h2>${esc(nx.full||nx.t)} →</h2></a></div>
+  </div>`;
+}
+
+/* audio player */
+let audio=null;
+function fmt(s){s=Math.max(0,Math.floor(s));return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}
+const caseEl=document.getElementById('view-case');
+caseEl.addEventListener('click',e=>{
+  const go=e.target.closest('[data-go]');if(go){document.getElementById(go.dataset.go)?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});return}
+  const t=e.target.closest('[data-app]');
+  if(t){document.querySelectorAll('[data-app]').forEach(b=>{const on=b===t;b.setAttribute('aria-selected',on);document.getElementById('flow-'+b.dataset.app).hidden=!on});return}
+  const pl=e.target.closest('.player');if(!pl)return;
+  const btn=pl.querySelector('.pbtn'),bars=[...pl.querySelectorAll('.wave i')],time=pl.querySelector('.ptime'),dur=+pl.dataset.dur;
+  if(!audio){audio=new Audio(pl.dataset.src);audio.preload='auto';
+    audio.addEventListener('timeupdate',()=>{const d=audio.duration||dur,f=audio.currentTime/d;bars.forEach((b,i)=>b.classList.toggle('on',i/bars.length<f));time.textContent=fmt(audio.currentTime)+' / '+fmt(d)});
+    audio.addEventListener('ended',()=>{btn.classList.remove('on');btn.setAttribute('aria-label','Play trailer')});
+    audio.addEventListener('error',()=>{time.textContent='Audio could not load here.'});}
+  if(e.target.closest('.wave')){const r=e.target.closest('.wave').getBoundingClientRect();audio.currentTime=((e.clientX-r.left)/r.width)*(audio.duration||dur);if(audio.paused){audio.play().catch(()=>{});btn.classList.add('on')}return}
+  if(e.target.closest('.pbtn')){if(audio.paused){audio.play().then(()=>{btn.classList.add('on');btn.setAttribute('aria-label','Pause trailer')}).catch(()=>{time.textContent='Tap again to play.'})}else{audio.pause();btn.classList.remove('on');btn.setAttribute('aria-label','Play trailer')}}
+});
+
+/* routing */
+function route(){
+  const id=location.hash.slice(1),p=P.find(x=>x.id===id);
+  const home=document.getElementById('view-home');
+  if(audio){audio.pause();audio=null}
+  if(p){caseEl.innerHTML=renderCase(p);caseEl.hidden=false;home.hidden=true;window.scrollTo(0,0)}
+  else{caseEl.hidden=true;caseEl.innerHTML='';home.hidden=false;if(['work','lenses','about','contact'].includes(id))document.getElementById(id)?.scrollIntoView()}
+  requestAnimationFrame(drawAll);
+}
+function init3d(){
+  document.querySelectorAll('.stage3d').forEach(st=>{
+    if(st.dataset.init)return;st.dataset.init=1;
+    const c=st.querySelector('.card3d');let rx=-8,ry=-24,vx=0,vy=.25,drag=false,lx=0,ly=0,auto=!matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const set=()=>{c.style.transform=`rotateX(${rx}deg) rotateY(${ry}deg)`};set();
+    st.onpointerdown=e=>{drag=true;auto=false;lx=e.clientX;ly=e.clientY;st.setPointerCapture(e.pointerId)};
+    st.onpointermove=e=>{if(!drag)return;vy=(e.clientX-lx)*.5;vx=-(e.clientY-ly)*.3;ry+=vy;rx=Math.max(-60,Math.min(60,rx+vx));lx=e.clientX;ly=e.clientY;set()};
+    st.onpointerup=()=>{drag=false};
+    const flip=st.parentElement.querySelector('[data-flip]');if(flip)flip.onclick=()=>{auto=false;ry+=180;c.style.transition='transform .8s cubic-bezier(.2,.7,.2,1)';set();setTimeout(()=>c.style.transition='',820)};
+    (function loop(){if(!c.isConnected)return;if(auto){ry+=.3;set()}else if(!drag&&Math.abs(vy)>.05){ry+=vy;vy*=.94;set()}requestAnimationFrame(loop)})();
+  });
+}
+function drawAll(){init3d();
+  document.querySelectorAll('canvas[data-mosaic]').forEach(cv=>mosaic(cv,cv.dataset.mosaic));
+  document.querySelectorAll('canvas[data-head]').forEach(cv=>head(cv,cv.dataset.head));
+}
+addEventListener('hashchange',route);
+let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(drawAll,120)});
+document.fonts&&document.fonts.ready.then(drawAll);
+route();
+</script>
+</body>
+</html>
